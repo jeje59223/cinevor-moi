@@ -14,3 +14,47 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.circle-svg {
+  display: block;
+  margin: 10px auto;
+  max-height: 100px;
+  /* position: relative;
+  top: -1030px; left: -90px; */
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+    top: 405px;
+    left: -180px;
+}
+.circle-svg text {
+  text-align: center;
+  font-size: 10px;
+  font-weight: bolder;
+  fill: white;
+}
+.circle-svg path.percent {
+  /* stroke: #4dd4ac; */
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+.circle-svg path.around {
+  stroke:#444444;
+  fill: none;
+  stroke-width: 2.8;
+}
+body {
+  text-align: center;
+}
+text {
+  color: white;
+}
